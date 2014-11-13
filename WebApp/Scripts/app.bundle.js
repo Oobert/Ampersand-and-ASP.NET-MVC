@@ -1745,7 +1745,8 @@ _.extend(Base.prototype, BBEvents, {
         var def, isEqual;
         for (var attr in diff) {
             def = this._definition[attr];
-            isEqual = this._getCompareForType(def && def.type);
+            if (!def) continue;
+            isEqual = this._getCompareForType(def.type);
             if (isEqual(old[attr], (val = diff[attr]))) continue;
             (changed || (changed = {}))[attr] = val;
         }
@@ -5591,7 +5592,7 @@ function View(attrs) {
     delete attrs.parent;
     BaseState.call(this, attrs, {init: false, parent: parent});
     this.on('change:el', this._handleElementChange, this);
-    this._parsedBindings = bindings(this.bindings);
+    this._parsedBindings = bindings(this.bindings, this);
     this._initializeBindings();
     if (attrs.el && !this.autoRender) {
         this._handleElementChange();

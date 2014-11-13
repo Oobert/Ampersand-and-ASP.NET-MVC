@@ -12,13 +12,7 @@ namespace WebApp
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                name: "peopleapi",
-                url: "api/people/{id}",
-                defaults: new { controller = "People", action = "Index", Id = UrlParameter.Optional }
-            );
-
+  
 
             routes.MapRoute(
                 name: "templateJS",

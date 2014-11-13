@@ -160,10 +160,7 @@
     <Content Include="Scripts\App\pages\person-view.js" />
     <Content Include="Scripts\App\views\Main.js" />
     <Content Include="Scripts\App\router.js" />
-    <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\App\views\person.js" />
-    <Content Include="Scripts\jquery-2.1.1.js" />
-    <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -177,7 +174,6 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Template\Pages\Home.cshtml" />
-    <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Template\TemplateJS.cshtml" />
     <Content Include="Views\Template\Head.cshtml" />
     <Content Include="Views\Template\Body.cshtml" />
