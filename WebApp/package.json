@@ -1,0 +1,41 @@
+{
+  "name": "APS_NET_MVC_Ampersand_Demo",
+  "author": "Tony Gemoll",
+  "version": "0.0.0",
+  "dependencies": {
+    "ampersand-dom": "^1.2.1",
+    "ampersand-form-view": "^2.0.0",
+    "ampersand-input-view": "^2.0.0",
+    "ampersand-model": "^4.0.0",
+    "ampersand-rest-collection": "^2.0.0",
+    "ampersand-router": "^1.0.1",
+    "ampersand-view": "^7.0.1",
+    "ampersand-view-switcher": "^1.0.2",
+    "andlog": "^1.0.0",
+    "async": "^0.9.0",
+    "clientconfig": "^1.0.0",
+    "domify": "^1.3.0",
+    "domready": "^1.0.5",
+    "favicon-setter": "^0.1.1",
+    "getconfig": "^0.3.0",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-browserify": "^0.5.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-watch": "^1.1.0"
+  },
+  "jshintConfig": {
+    "asi": false,
+    "browser": true,
+    "curly": false,
+    "expr": true,
+    "indent": 4,
+    "loopfunc": true,
+    "node": true,
+    "trailing": true,
+    "undef": true,
+    "white": true
+  }
+}

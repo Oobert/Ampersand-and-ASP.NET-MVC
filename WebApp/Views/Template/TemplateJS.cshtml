@@ -1,0 +1,64 @@
+﻿@{
+    
+    Layout = null;
+}
+
+
+
+    (function () {
+        var root = this, exports = {};
+
+
+        exports["pages"] = {};
+        exports["includes"] = {};
+
+        exports["body"] = function () {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("Body.cshtml"))";
+        };
+
+        exports["head"] = function () {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("head.cshtml"))";
+        };
+
+        exports["pages"]["home"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("Pages\\home.cshtml"))";
+        };
+
+        exports["pages"]["info"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("Pages\\info.cshtml"))";
+        };
+
+        exports["pages"]["collectionDemo"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("Pages\\collectionDemo.cshtml"))";
+        };
+
+        exports["pages"]["personAdd"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("Pages\\personAdd.cshtml"))";
+        };
+
+        exports["pages"]["personEdit"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("Pages\\personEdit.cshtml"))";
+        };
+
+        exports["pages"]["personView"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("Pages\\personView.cshtml"))";
+        };
+
+        exports["includes"]["person"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("includes\\person.cshtml"))";
+        };
+
+        exports["includes"]["formInput"] = function pages_home() {
+            return "@Html.Raw(((WebApp.Controllers.TemplateController)ViewContext.Controller).RenderRazorViewToString("includes\\formInput.cshtml"))";
+        };
+
+        // attach to window or export with commonJS
+        if (typeof module !== "undefined" && typeof module.exports !== "undefined") {
+            module.exports = exports;
+        } else if (typeof define === "function" && define.amd) {
+            define(exports);
+        } else {
+            root.templatizer = exports;
+        }
+
+    })();
